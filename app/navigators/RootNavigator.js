@@ -1,35 +1,28 @@
 import { StackNavigator } from 'react-navigation';
 
-import Login from '../screens/Login';
-import Todos from '../screens/Todos';
-import TodoDetail from '../screens/TodoDetail';
-import TodoCreate from '../screens/TodoCreate';
+import TodosList from '../todos/screens/TodosList'
+import TodosCreate from '../todos/screens/TodosCreate'
+import FoodsList from '../foods/screens/FoodsList'
 
 const RootNavigator = StackNavigator({
-  Login: {
-    screen: Login,
+  TodosList: {
+    screen: TodosList,
     navigationOptions: {
-      title: 'Login'
+      title: 'Todos List'
     }
   },
-  Todos: {
-    screen: Todos,
+  TodosCreate: {
+    screen: TodosCreate,
     navigationOptions: {
-      title: 'List'
+      title: 'Create Todo'
     }
   },
-  TodoDetail: {
-    screen: TodoDetail,
+  FoodsList: {
+    screen: FoodsList,
     navigationOptions: {
-      title: 'Detail'
+      title: 'Foods List'
     }
   },
-  TodoCreate: {
-    screen: TodoCreate,
-    navigationOptions: {
-      title: 'Create'
-    }
-  }
 })
 
 export default RootNavigator;
